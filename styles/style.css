@@ -57,7 +57,7 @@ ol {
   grid-template-areas: "result details";
   align-items: end;
   gap: 30px;
-  margin: 0 auto;
+  margin: 0 30px;
 }
 
 .result {
@@ -286,6 +286,7 @@ ol {
   max-width: 196px;
   display: flex;
   flex-direction: column;
+  gap: 5px;
 }
 
 .content__video-card-title {
