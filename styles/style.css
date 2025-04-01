@@ -78,6 +78,7 @@ ol {
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
+  object-position: center
 }
 
 .search-form {
@@ -101,15 +102,15 @@ ol {
 
 .search-form__label {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 5px;
   cursor: pointer;
   width: fit-content;
 }
 
 .search-form__textfield {
-  inline-size: 225px;
-  block-size: 27px;
+  min-width: 225px;
+  min-height: 27px;
   border: none;
   border-top: 1px solid currentColor;
   border-bottom: 1px solid currentColor;
@@ -118,6 +119,10 @@ ol {
   font-size: 18px;
   background-color: transparent;
   appearance: none;
+}
+
+.search-form__textfield:focus {
+  outline: none;
 }
 
 .search-form__checkbox-list {
@@ -157,7 +162,7 @@ ol {
   cursor: pointer;
 }
 
-.search-form__label-text:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
 }
 
@@ -177,6 +182,7 @@ ol {
   font-weight: 700;
   background-color: transparent;
   cursor: pointer;
+  min-height: 34px;
 }
 
 .button:focus {
@@ -199,15 +205,13 @@ ol {
 
 .search-form__submit-button {
   align-self: flex-end;
-  block-size: 35px;
-  inline-size: 195px;
+  min-width: 195px;
 }
 
 .content__details {
   grid-area: details;
   display: flex;
   flex-direction: column;
-  width: 399px;
   gap: 23px;
 }
 
@@ -263,8 +267,7 @@ ol {
 }
 
 .content__card-link:hover {
-  text-decoration: solid underline white 1px;
-  text-underline-offset: 5.5px;
+  text-decoration: underline;
 }
 
 .content__card-link:active {
@@ -279,8 +282,8 @@ ol {
 }
 
 .content__video-card-description-container {
-  inline-size: 196px;
-  block-size: 103px;
+  width: 100%;
+  max-width: 196px;
   display: flex;
   flex-direction: column;
 }
@@ -289,7 +292,7 @@ ol {
   font-family: "Oswald", sans-serif;
   font-size: 30px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1;
   text-transform: uppercase;
   color: #fff;
   white-space: nowrap;
@@ -320,7 +323,7 @@ ol {
 
 .more-button {
   inline-size: 100%;
-  block-size: 34px;
+  min-height: 34px;
   margin-top: 30px;
 }
 
